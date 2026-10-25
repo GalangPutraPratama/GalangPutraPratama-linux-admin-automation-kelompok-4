@@ -1,0 +1,2 @@
+[2026-10-25 19:43:09] [ERROR] Direktori sumber tidak ditemukan: /path/yang/tidak/ada
+Exit code: 2
