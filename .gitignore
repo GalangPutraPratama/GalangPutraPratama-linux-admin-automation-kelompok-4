@@ -3,3 +3,16 @@ logs/
 *.sha256
 *.conf
 !*.conf.example
+
+# Jangan upload data backup beneran
+*.log
+
+# Credential
+*.pem
+*.key
+id_rsa*
+backup.conf
+
+# OS
+.DS_Store
+Thumbs.db
