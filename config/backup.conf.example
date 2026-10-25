@@ -1,0 +1,14 @@
+# ================================================
+# Contoh konfigurasi backup
+# Salin file ini menjadi backup.conf dan sesuaikan
+# JANGAN isi credential atau data sensitif
+# ================================================
+
+# Direktori yang akan di-backup
+SOURCE_DIR="/home/user/data"
+
+# Direktori tujuan penyimpanan arsip
+DEST_DIR="/home/user/backup"
+
+# Direktori log (opsional, default: sama dengan DEST_DIR)
+LOG_DIR="/home/user/backup/logs"
