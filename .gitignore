@@ -1,0 +1,5 @@
+logs/
+*.tar.gz
+*.sha256
+*.conf
+!*.conf.example
