@@ -1,0 +1,52 @@
+========================================
+ Test Suite — backup.sh
+ Tanggal: Sun Oct 25 19:40:25 WIB 2026
+========================================
+
+--- Test 1: Backup normal (harus sukses, exit 0) ---
+[2026-10-25 19:40:25] [INFO] === Memulai Sesi Backup ===
+[2026-10-25 19:40:25] [INFO] Sumber: /tmp/tmp.SOtjTLZZfJ | Tujuan: /tmp/tmp.D7ezGbufPL
+[2026-10-25 19:40:25] [INFO] Memulai kompresi direktori /tmp/tmp.SOtjTLZZfJ ...
+[2026-10-25 19:40:25] [INFO] Arsip berhasil dibuat: backup_20261025_194025.tar.gz
+[2026-10-25 19:40:25] [INFO] Checksum SHA256 tersimpan: backup_20261025_194025.tar.gz.sha256
+[2026-10-25 19:40:25] [INFO] Memverifikasi integritas arsip backup_20261025_194025.tar.gz ...
+[2026-10-25 19:40:25] [INFO] Verifikasi integritas valid (SHA256 OK).
+[2026-10-25 19:40:25] [INFO] === Sesi Backup Berhasil Selesai ===
+[PASS] Backup normal (expected=0, actual=0)
+  ✓ Arsip ditemukan: backup_20261025_194025.tar.gz
+  ✓ Checksum ditemukan: backup_20261025_194025.tar.gz.sha256
+
+--- Test 2: Sumber tidak ada (harus gagal, exit 2) ---
+[2026-10-25 19:40:25] [ERROR] Direktori sumber tidak ditemukan: /path/yang/tidak/ada
+[PASS] Sumber tidak ada (expected=2, actual=2)
+
+--- Test 3: Argumen kurang (harus gagal, exit 1) ---
+[2026-10-25 19:40:25] [ERROR] Argumen wajib kurang. Gunakan: ./src/backup.sh -s <sumber> -d <tujuan>
+[PASS] Argumen kurang (expected=1, actual=1)
+
+========================================
+ Hasil: 3/3 lulus, 0/3 gagal
+========================================
+
+
+========================================
+ INTERPRETASI HASIL
+========================================
+Test 1 - Backup normal: PASS
+  Script berjalan sukses (exit code 0), membuat arsip .tar.gz dan
+  file checksum .sha256, lalu memverifikasi integritasnya (SHA256 OK).
+
+Test 2 - Sumber tidak ada: PASS
+  Script menolak direktori sumber yang tidak ditemukan dengan pesan
+  ERROR dan exit code 2, sesuai rancangan.
+
+Test 3 - Argumen kurang: PASS
+  Script dijalankan tanpa argumen, menampilkan pesan penggunaan dan
+  keluar dengan exit code 1, sesuai rancangan.
+
+Kesimpulan: 3 dari 3 test lulus. Exit code 0 untuk sukses, 1 untuk
+argumen salah, dan 2 untuk sumber tidak valid berjalan sesuai desain.
+
+Catatan: output bersifat dinamis. Timestamp, nama direktori
+sementara, dan nama arsip akan berbeda pada setiap eksekusi,
+sedangkan exit code dan status PASS/FAIL tetap konsisten.

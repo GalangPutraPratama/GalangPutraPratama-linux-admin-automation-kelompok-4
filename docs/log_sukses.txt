@@ -1,0 +1,9 @@
+[2026-10-25 19:44:53] [INFO] === Memulai Sesi Backup ===
+[2026-10-25 19:44:53] [INFO] Sumber: /tmp/demo_src | Tujuan: /tmp/demo_dst
+[2026-10-25 19:44:53] [INFO] Memulai kompresi direktori /tmp/demo_src ...
+[2026-10-25 19:44:53] [INFO] Arsip berhasil dibuat: backup_20261025_194453.tar.gz
+[2026-10-25 19:44:53] [INFO] Checksum SHA256 tersimpan: backup_20261025_194453.tar.gz.sha256
+[2026-10-25 19:44:53] [INFO] Memverifikasi integritas arsip backup_20261025_194453.tar.gz ...
+[2026-10-25 19:44:53] [INFO] Verifikasi integritas valid (SHA256 OK).
+[2026-10-25 19:44:53] [INFO] === Sesi Backup Berhasil Selesai ===
+Exit code: 0
