@@ -87,13 +87,17 @@ Cara yang sama juga tersedia melalui fungsi `restore_backup` di `src/backup.sh`.
 | 4 | Pembuatan arsip (tar) gagal |
 
 ## Hasil Test
-Output lengkap ada di `docs/hasil_test.txt`.
-<!-- TODO (Delia): isi sesuai hasil aktual dari Shelenia, jangan diisi sebelum test dijalankan -->
-- Test 1: Backup normal - (isi PASS/FAIL, exit code)
-- Test 2: Sumber tidak ada - (isi PASS/FAIL, exit code)
-- Test 3: Argumen kurang - (isi PASS/FAIL, exit code)
 
-Contoh log: `docs/log_sukses.txt` dan `docs/log_gagal.txt`
+Output lengkap ada di `docs/hasil_test.txt`.
+
+- ✅ Test 1: Backup normal — PASS (exit code 0, arsip dan checksum berhasil dibuat)
+- ✅ Test 2: Sumber tidak ada — PASS (exit code 2, script menolak direktori yang tidak ditemukan)
+- ✅ Test 3: Argumen kurang — PASS (exit code 1, script menampilkan pesan penggunaan)
+
+Hasil: **3/3 lulus**.
+
+Contoh log sukses: `docs/log_sukses.txt`
+Contoh log gagal: `docs/log_gagal.txt`
 
 ## Batasan / Fitur Belum Selesai
 - Belum mendukung backup terjadwal (cron)
@@ -101,12 +105,13 @@ Contoh log: `docs/log_sukses.txt` dan `docs/log_gagal.txt`
 - Belum terintegrasi dengan layanan remote (SSH/SCP), direncanakan pada P12
 
 ## Kontribusi Anggota
-| Anggota | Bagian | Commit/PR |
-|---------|--------|-----------|
-| Galang Putra Pratama | Script utama: `main`, `do_backup`, `verify_backup`, `restore_backup` | (isi commit ID/PR) |
-| Rania Zoya Irfan | Validasi input, error handling, logging, cleanup, ShellCheck | (isi commit ID/PR) |
-| Shelenia Violine Karo Karo | Test case, bukti hasil test, interpretasi | (isi commit ID/PR) |
-| Delia Ayu Nandhita | README, config contoh, dokumentasi, submission | (isi commit ID/PR) |
+
+| Anggota | Bagian | PR / Commit |
+|---------|--------|-------------|
+| Galang Putra Pratama | Script utama: `main`, `do_backup`, `verify_backup`, `restore_backup` | PR #1 · `9b38ca1` |
+| Rania Zoya Irfan | Validasi input, error handling, logging, cleanup, ShellCheck | PR #2 · `5804cda` |
+| Shelenia Violine Karo Karo | Test case (1 sukses, 2 gagal), bukti hasil test, interpretasi | PR #3 · `76fc4c2` |
+| Delia Ayu Nandhita | README, config contoh, dokumentasi, submission | PR #4 · `1325938` |
 
 ## Lisensi
 Tugas Proyek 2 - Praktikum Sistem Operasi
